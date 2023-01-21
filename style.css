@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;600&display=swap');
+
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	background: #212121;
+	color: #f8f8f8;
+	font-family: 'Barlow Semi Condensed', sans-serif;
+	font-size: 1.1em;
+}
+
+nav {
+	position: fixed;
+	width: calc(18rem);
+	height: 100vh;
+	font-weight: 600;
+	font-size: 1.2em;
+	overflow: scroll;
+	display: flex;
+}
+
+nav > div {
+	padding: 1em 0 1em 0;
+	flex-shrink: 1;
+	margin: 0 auto 0 auto;
+	display: flex;
+	flex-direction: column;
+}
+
+main {
+	padding: 0 1em 1em calc(18rem + 1em);
+	flex-grow: 1;
+	/*background: #00ff0008; /* DEBUGGING */
+	overflow: scroll;
+}
+
+a {
+	color: #4cd;
+	text-decoration: none;
+	margin-bottom: 0.15em;
+}
+
+nav .navindent {
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	padding-left: 20px;
+	font-size: 0.9em;
+}
+
+code {
+	background: #3a3a3a;
+}
+
+td, th {
+	padding-left: 0.3em;
+	padding-right: 0.3em;
+	text-align: left;
+}
+
+td code {
+	background: none;
+}
+
+tr:nth-child(odd) {
+	background: #383838;
+}
+tr:nth-child(even) {
+	background: #2a2a2a;
+}
+
+h1 {
+	font-size: 2.7em;
+	margin: 1.5rem 0 1.5rem 0;
+}
+h2 {
+	font-size: 2.1em;
+	margin: 1.0rem 0 0.1rem 0;
+}
+h3 {
+	font-size: 1.6em;
+	margin: 1.0rem 0 0.1rem 0;
+}
+h4 {
+	font-size: 1.1em;
+	margin: 1.0rem 0 0.1rem 0;
+}
+h5 {
+	font-size: 0.9em;
+	margin: 1.0rem 0 0.1rem 0;
+}
+p {
+	margin: 0.7em 0 0.5em 0;
+}
+
+.categories {
+	box-sizing: border-box;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	gap: 1.4em;
+	padding: 0.5em;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+.category {
+	padding: 1em;
+	min-width: 25rem;
+	width: 25rem;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 0;
+	border-radius: 3px;
+	background: #141414;
+}
+
+.category h5 {
+	margin-top: 0;
+	font-size: 1.3em;
+	text-align: center;
+}
+
+.category .objective, .category .notes {
+	text-align: center;
+}
+
+.category hr {
+	color: white;
+	width: 100%;
+	margin: 1em 0 1em 0;
+}
+
+table.commands tbody {
+	display: block;
+	max-height: 30em;
+	overflow: scroll;
+}

@@ -1,0 +1,234 @@
+Command,Type,"Allowed Values"
+load,Action,-
+"+forward / -forward",Action,-
+"+moveleft / -moveleft",Action,-
+"+moveright / -moveright",Action,-
+"+back / -back",Action,-
+"+left / -left",Action,-
+"+right / -right",Action,-
+"+duck / -duck",Action,-
+"+movedown / -movedown",Action,-
+"+use / -use",Action,-
+"+attack / -attack",Action,-
+"+attack2 / -attack2",Action,-
+"+remote_view / -remote_view",Functional,-
+"+zoom / -zoom",Functional,-
++quick_ping,Action,-
+-quick_ping,Functional,-
++coop_ping,Action,-
+-coop_ping,Functional,-
++mouse_menu,Functional,-
+-mouse_menu,Action,-
+sv_zoom_stop_movement_threashold,Functional,-
+sv_zoom_stop_time_threashold,Functional,-
+sensitivity,Functional,-
+zoom_sensitivity_ratio,Functional,-
+m_yaw,Functional,-
+m_rawinput,Functional,-
+save,Functional,-
+autosave,Functional,-
+con_drawnotify,Functional,-
+vm_debug,Functional,-
+cl_showpos,Functional,"0, 1"
+cl_forwardspeed,Functional,"0 .. 175"
+cl_backspeed,Functional,"0 .. 175"
+cl_sidespeed,Functional,"0 .. 175"
+cl_fov,Functional,"45 .. 140"
+contimes,Functional,-
+developer,Functional,"0, 1"
+con_filter_enable,Functional,-
+con_filter_text_out,Functional,-
+"stopvideos (in a cutscene video)",Action,-
+"stopvideos (in coop level transition)",Non-functional,-
+net_graph,Non-functional,-
+viewmodel_offset_x,Non-functional,-
+viewmodel_offset_y,Non-functional,-
+viewmodel_offset_z,Non-functional,-
+r_PortalTestEnts,Non-functional,-
+r_portal_fastpath,Non-functional,-
+r_portal_use_pvs_optimization,Non-functional,-
+cc_lang,Non-functional,-
+cc_subtitles,Non-functional,-
+mat_vsync,Non-functional,-
+mat_specular,Non-functional,-
+mat_motion_blur_enabled,Non-functional,-
+mat_ambient_light_r,Non-functional,-
+mat_ambient_light_g,Non-functional,-
+mat_ambient_light_b,Non-functional,-
+mat_fullbright,Non-functional,"0, 1"
+save_history_count,Non-functional,-
+save_screenshot,Non-functional,-
+ui_loadingscreen_transition_time,Non-functional,-
+ui_loadingscreen_fadein_time,Non-functional,-
+ui_loadingscreen_mintransition_time,Non-functional,-
+ui_transition_effect,Non-functional,-
+fps_max,Functional,"30 .. 999"
+say,Non-functional,-
+ghost_type,Non-functional,"0, 1, 4"
+ghost_prop_model,Banned,-
+ghost_*,Non-functional,-
+sar_force_fov,Functional,"45 .. 140"
+sar_speedrun_*,Non-functional,-
+sar_stop,Functional,-
+sar_toast_create,Non-functional,-
+sar_toast_*,Functional,-
+sar_check_update,Non-functional,-
+sar_update,Non-functional,-
+svar_*,Non-functional,-
+sar_aim_point_*,Banned,-
+sar_aircontrol,Banned,-
+sar_autojump,Banned,-
+sar_autorecord,Non-functional,-
+sar_cam_*,Banned,-
+nop,Non-functional,-
+sar_about,Non-functional,-
+sar_achievement_tracker_*,Non-functional,-
+sar_allow_resizing_window,Non-functional,-
+sar_always_transmit_heavy_ents,Non-functional,-
+sar_avg_*,Non-functional,-
+sar_bink_respect_host_time,Non-functional,-
+sar_challenge_autostop,Non-functional,-
+sar_challenge_autosubmit_reload_api_key,Non-functional,-
+sar_chat,Non-functional,-
+sar_cheat_hud_*,Non-functional,-
+sar_clear_lines,Non-functional,-
+sar_cm_rightwarp,Non-functional,-
+sar_con_filter_*,Non-functional,-
+sar_coop_reset_progress,Banned,-
+sar_cps_*,Non-functional,-
+sar_cvarlist,Non-functional,-
+sar_cvars_*,Banned,-
+sar_debug_listener,Banned,-
+sar_delete_alias_cmds,Non-functional,-
+sar_demo_blacklist_*,Non-functional,-
+sar_demo_overwrite_bak,Non-functional,-
+sar_demo_portal_interp_fix,Non-functional,-
+sar_demo_remove_broken,Non-functional,-
+sar_demo_replay,Banned,-
+sar_disable_challenge_stats_hud,Non-functional,-
+sar_disable_coop_score_hud,Non-functional,-
+sar_disable_no_focus_sleep,Non-functional,-
+sar_disable_progress_bar_update,Non-functional,-
+sar_disable_save_status_hud,Non-functional,-
+sar_disable_steam_pause,Non-functional,-
+sar_disable_weapon_sway,Non-functional,-
+sar_dpi_scale,Functional,-
+sar_drawline_*,Banned,-
+sar_duckjump,Banned,-
+sar_dump_*,Banned,-
+sar_echo,Non-functional,-
+sar_echo_nolf,Non-functional,-
+sar_ei_*,Banned,-
+sar_ent_info,Banned,-
+sar_ent_slot_serial,Banned,-
+sar_exit,Functional,-
+sar_export_stats,Non-functional,-
+sar_import_stats,Non-functional,-
+sar_fast_load_preset,Non-functional,-
+sar_fcps_*,Banned,-
+sar_find_client_class,Banned,-
+sar_find_server_class,Banned,-
+sar_find_ent,Banned,-
+sar_find_ents,Banned,-
+sar_fix_reloaded_cheats,Non-functional,-
+sar_font_*,Non-functional,-
+sar_force_fov,Functional,-
+sar_force_qc,Banned,-
+sar_getpos,Banned,-
+sar_geteyepos,Banned,-
+sar_give_betsrighter,Banned,-
+sar_give_fly,Banned,-
+sar_groundframes_*,Non-functional,-
+sar_hud_velocity_precision,Functional,"0 .. 2"
+sar_hud_precision,Functional,"0 .. 6"
+sar_hud_ent_slot_serial,Banned,-
+sar_hud_eyeoffset,Banned,-
+sar_hud_inspection,Banned,-
+sar_hud_tbeam,Banned,-
+sar_hud_tbeam_count,Banned,-
+sar_hud_trace,Banned,-
+sar_hud_*,Functional,-
+sar_ihud_*,Non-functional,-
+sar_inspection_*,Banned,-
+sar_jumpboost,Banned,-
+sar_list_client_classes,Banned,-
+sar_list_server_classes,Banned,-
+sar_list_ents,Banned,-
+sar_load_delay,Non-functional,-
+sar_loads_norender,Non-functional,-
+sar_loads_uncap,Non-functional,-
+sar_lphud_*,Non-functional,-
+sar_minimap_*,Non-functional,-
+sar_mtrigger_legacy_*,Non-functional,-
+sar_nextdemo,Banned,-
+sar_paint_reseed,Banned,-
+sar_patch_bhop,Banned,-
+sar_patch_cfg,Banned,-
+sar_pip_align,Non-functional,-
+sar_portalgun_hud_*,Banned,-
+sar_portals_thru_portals,Banned,-
+sar_pp_hud_*,Banned,-
+sar_prevent_ehm,Non-functional,-
+sar_prevent_mat_snapshot_recompute,Non-functional,-
+sar_print_stats,Non-functional,-
+sar_record_at_*,Non-functional,-
+sar_record_mkdir,Non-functional,-
+sar_record_prefix,Non-functional,-
+sar_rename,Non-functional,-
+sar_render_*,Banned,-
+sar_rng_*,Banned,-
+sar_ruler_*,Banned,-
+sar_scrollspeed,Non-functional,-
+sar_seamshot_finder,Banned,-
+sar_session,Non-functional,-
+sar_show_entinp,Banned,-
+sar_skiptodemo,Banned,-
+sar_speedrun_*,Non-functional,-
+sar_sr_hud_*,Non-functional,-
+sar_startdemos,Banned,-
+sar_startdemosfolder,Banned,-
+sar_statcounter_filepath,Non-functional,-
+sar_stats_*,Non-functional,-
+sar_stitcher_*,Banned,-
+sar_stop,Non-functional,-
+sar_strafe_quality_*,Non-functional,-
+sar_strafesync_*,Non-functional,-
+sar_sum_*,Non-functional,-
+sar_tas_*,Banned,-
+sar_teleport,Banned,-
+sar_teleport_setpos,Non-functional,-
+sar_tick_debug,Banned,-
+sar_time_demo,Banned,-
+sar_time_demos,Banned,-
+sar_time_demo_dev,Banned,-
+sar_timer_*,Non-functional,-
+sar_toast_*,Non-functional,-
+sar_togglewait,Banned,-
+sar_trace_*,Banned,-
+sar_velocitygraph_*,Non-functional,-
+sar_vphys_hud_*,Banned,-
+sar_vphys_setangle,Banned,-
+sar_vphys_setasleep,Banned,-
+sar_vphys_setgravity,Banned,-
+sar_vphys_setspin,Banned,-
+sar_workshop_*,Banned,-
+sar_pause_at,Banned,-
+sar_pause_for,Banned,-
+sar_alias,Inherited,-
+sar_function,Functional,-
+sar_expand,Functional,-
+cond,Inherited,-
+conds,Inherited,-
+sar_alias_run,Inherited,-
+sar_function_run,Inherited,-
+svar_*,Non-functional,-
+sar_on_*,Non-functional,"Functional commands only"
+hwait,Non-functional,"Non-functional commands only"
+seq,Non-functional,"Non-functional commands only"
+wait,Non-functional,"Non-functional commands only"
+wait_to,Non-functional,"Non-functional commands only"
+wait_for,Non-functional,"Non-functional commands only"
+wait_mode,Non-functional,-
+wait_persist_across_loads,Non-functional,-
+sar_quickhud_*,Non-functional,"Pre-defined allowed values, see above"
+sar_crosshair_*,Non-functional,"Pre-defined allowed values, see above"
