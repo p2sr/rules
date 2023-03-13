@@ -7,4 +7,4 @@ through SAR's `hwait` command. Note that scrolling the mouse wheel a single tick
 counts as pressing and immediately releasing the "key" of the mouse wheel.
 
 Automation of commands may be achieved through mechanisms like the `sar_on_load`
-command. This is limited to functional commands.
+command. This is limited to non-functional commands in fullgame, and functional commands in CM.
