@@ -213,15 +213,15 @@ sar_vphys_setspin,Banned,-
 sar_workshop_*,Banned,-
 sar_pause_at,Banned,-
 sar_pause_for,Banned,-
-sar_alias,Inherited,-
-sar_function,Functional,-
-sar_expand,Functional,-
+sar_alias,Non-functional,-
+sar_function,Non-functional,-
+sar_expand,Inherited,-
 cond,Inherited,-
 conds,Inherited,-
 sar_alias_run,Inherited,-
 sar_function_run,Inherited,-
 svar_*,Non-functional,-
-sar_on_*,Non-functional,"Functional commands only"
+sar_on_*,Non-functional,"Non-functional commands only"
 hwait,Non-functional,"Non-functional commands only"
 seq,Non-functional,"Non-functional commands only"
 wait,Non-functional,"Non-functional commands only"
