@@ -71,7 +71,6 @@ sar_force_fov,Functional,"45 .. 140"
 sar_speedrun_*,Non-functional,-
 sar_stop,Functional,-
 sar_toast_create,Non-functional,-
-sar_toast_*,Functional,-
 sar_check_update,Non-functional,-
 sar_update,Non-functional,-
 svar_*,Non-functional,-
