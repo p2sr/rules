@@ -1,6 +1,6 @@
 ## Proof Standards
 
-Unless otherwise noted in category rules, all runs most have some form of proof
+Unless otherwise noted in category rules, all runs must have some form of proof
 associated with them, which could be in the form of a video or of demo(s). Most
 categories will require demo proof for runs above a certain rank. Demos are generally
 encouraged over videos as they have several tangible advantages.

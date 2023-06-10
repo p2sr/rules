@@ -42,7 +42,7 @@ major differences to default behaviour.
 The game's default crosshair size (including quickhud) has a fixed pixel size.
 Custom crosshairs via `sar_crosshair` and `sar_quickhud` are permitted only with
 specific assets and parameters, to get a crosshair equivalent to the default on
-a different resolution. The crosshair used must may change throughout the run.
+a different resolution. The crosshair used may change throughout the run.
 If you wish to use a custom crosshair, ask a moderator for your category for an
 allowed configuration.
 
