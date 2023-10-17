@@ -8,8 +8,7 @@
 
 #### General Rules
 
-`Developer 1` cannot be used to make the player move early, any runs that used
-developer 1 will be grandfathered in, and 1.5 seconds will be added per map where it was deemed to be an advantage.
+`Developer 1` cannot be used to make the player move early.
 
 Whichever categories are present will adopt their respective rulesets from the basegame categories.
 
