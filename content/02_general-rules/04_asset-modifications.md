@@ -50,6 +50,10 @@ Scene files cannot be changed, regardless of the reasoning.
 
 Script files cannot be changed, regardless of the reasoning.
 
+There is an exception for changing `Portal 2/portal2/scripts/talker` to include
+`taunt fast`. More information can be found [here](https://discord.com/channels/146404426746167296/730456562337972248/1234878193299886221)
+in the [P2SR discord](https://discord.com/invite/hRwE4Zr)
+
 #### Sound
 
 Sound files can be changed, but not to gain an advantage.
