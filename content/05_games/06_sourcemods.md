@@ -11,5 +11,3 @@
 `Developer 1` cannot be used to make the player move early.
 
 Whichever categories are present will adopt their respective rulesets from the basegame categories.
-
-
