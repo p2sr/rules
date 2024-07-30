@@ -35,7 +35,7 @@ impossible. Similarly, loading saves to retry lucky door skip in
 `sp_a2_bridge_the_gap` is SLA, as it affects the overall chance of successfully
 getting through the door. Exceptions are made to this rule for physics RNG
 specifically, so that loading saves and getting different physics RNG is not
-considered SLA, since this RNG is prevalant to the point of being unavoidable.
+considered SLA, since this RNG is prevalent to the point of being unavoidable.
 
 ### Out of Bounds (OOB)
 
