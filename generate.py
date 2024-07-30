@@ -110,5 +110,5 @@ out = (template
     .replace("{{COMMAND_LIST}}", generate_command_table())
 )
 
-with open("out.html", "w") as f:
+with open("out/out.html", "w") as f:
     f.write(out)
