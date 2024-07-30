@@ -1,0 +1,39 @@
+name: Pages
+
+on:
+    push:
+        branches: [ "main" ]
+    pull_request:
+        branches: [ "main" ]
+    workflow_dispatch:
+
+jobs:
+    build:
+        environment:
+          name: github-pages
+          url: ${{steps.deployment.outputs.page_url}}
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+
+            - name: Set up Python
+              uses: actions/setup-python@v5
+              with:
+                python-version: "3.x"
+
+            - name: Setup Pages
+              uses: actions/configure-pages@v3
+
+            # builds to out.html
+            - name: Build the site
+              run: python "./generate.py"
+
+            - name: Upload Artifact
+              uses: actions/upload-pages-artifact@v2
+              with:
+                path: out.html
+
+            - name: Deploy to GitHub Pages
+              id: deployment
+              uses: actions/deploy-pages@v2
