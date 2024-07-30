@@ -1,8 +1,7 @@
 ### External Modifications
 
-Currently, the only permitted external modifications for use in runs are
-SourceAutoRecord (SAR) on the latest full release or a later pre-release, and
-`pathmatch_cache` for Linux users.
+Currently, the only permitted external modification for use in runs is
+SourceAutoRecord (SAR) on the latest full release or a later pre-release.
 
 Custom builds of SAR are *not* allowed - only the releases from the official GitHub
 repository may be used. Other external modifications, such as game plugins or code
