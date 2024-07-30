@@ -110,5 +110,6 @@ out = (template
     .replace("{{COMMAND_LIST}}", generate_command_table())
 )
 
+os.makedirs("out", exist_ok=True) # just in case
 with open("out/out.html", "w") as f:
     f.write(out)
