@@ -111,5 +111,5 @@ out = (template
 )
 
 os.makedirs("out", exist_ok=True) # just in case
-with open("out/out.html", "w") as f:
+with open("out/index.html", "w") as f:
     f.write(out)
