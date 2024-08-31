@@ -30,7 +30,7 @@ const updateScroll = () => {
     let max = 0.0;
     for (const section of calcAllNavAmounts()) {
         const header = document.getElementById(section.id);
-        if (window.scrollY + 1 >= header.offsetTop) {
+        if (main.scrollTop + 1 >= header.offsetTop) {
             min = section.min;
             max = section.max;
         }
@@ -41,5 +41,5 @@ const updateScroll = () => {
 };
 
 updateScroll();
-window.addEventListener("scroll", updateScroll);
+main.addEventListener("scroll", updateScroll);
 window.addEventListener("resize", updateScroll);
