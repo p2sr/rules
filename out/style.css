@@ -21,8 +21,24 @@ nav, main {
 nav {
     padding: 30px;
 
+    position: absolute;
+    width: 100vw;
+    box-sizing: border-box;
+    z-index: 1;
+    background: #212121 !important;
+
+    height: calc(30px + 48px);
+    overflow: hidden;
+
     font-weight: 600;
     font-size: 1.2em;
+
+    transition: .3s ease;
+}
+
+nav.visible {
+    height: 100vh;
+    overflow: scroll;
 }
 
 nav a {
@@ -31,6 +47,7 @@ nav a {
 
 main {
     padding: 0 20px;
+    margin-top: calc(30px + 48px);
 }
 
 a {
