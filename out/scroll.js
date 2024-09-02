@@ -26,6 +26,11 @@ const calcAllNavAmounts = () => {
 
 
 const updateScroll = () => {
+    // Don't change background color on mobile
+    if (window.innerWidth < 800) {
+        return nav.style.removeProperty("background");
+    }
+
     let min = 0.0;
     let max = 0.0;
     for (const section of calcAllNavAmounts()) {
