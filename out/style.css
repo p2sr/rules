@@ -14,28 +14,28 @@ body {
     font-size: 1.1em;
 }
 
-nav, main {
-    overflow: scroll;
-}
-
 nav {
-    padding: 30px;
-
+    /* This positioning will only be active on mobile */
     position: absolute;
     width: 100vw;
+    height: calc(30px + 48px); /* Set the height relative to the padding to only show the menu icon */
     box-sizing: border-box;
-    z-index: 1;
-    background: #212121 !important;
 
-    height: calc(30px + 48px);
+    padding: 30px;
+    background: #212121;
+
+    /* Don't let the user scroll when only the menu icon is shown */
     overflow: hidden;
 
     font-weight: 600;
     font-size: 1.2em;
 
+    /* Animate menu opening and closing on mobile */
+    z-index: 1;
     transition: .3s ease;
 }
 
+/* This class gets applied when the menu is opened on mobile */
 nav.visible {
     height: 100vh;
     overflow: scroll;
@@ -47,7 +47,8 @@ nav a {
 
 main {
     padding: 0 20px;
-    margin-top: calc(30px + 48px);
+    margin-top: calc(30px + 48px); /* Offset the main content to appear under the menu on mobile */
+    overflow: scroll;
 }
 
 a {
@@ -153,4 +154,25 @@ table.commands tbody {
     display: block;
     max-height: 30em;
     overflow: scroll;
+}
+
+/* Large screens only */
+@media (min-width: 800px) {
+    /* ""Undo"" all the mobile styling */
+    nav {
+        position: unset;
+        width: unset;
+        height: unset;
+        overflow: scroll;
+    }
+
+    /* Hide the menu icon */
+    nav img {
+        display: none;
+    }
+
+    /* Remove the top offset */
+    main {
+        margin: 0;
+    }
 }
