@@ -4,3 +4,7 @@ document.querySelectorAll("nav img, nav a").forEach(e => {
         document.querySelector("nav").scrollTo({ top: 0, behavior: "smooth" }); // Reset scroll position
     })
 });
+
+window.addEventListener('load', () => {
+    document.querySelector("nav").scrollTo({ top: 0 });
+});
