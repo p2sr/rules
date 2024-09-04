@@ -163,6 +163,11 @@ table.commands tbody {
     overflow: scroll;
 }
 
+table.commands tr:nth-child(1) {
+    position: sticky;
+    top: 0;
+}
+
 /* Large screens only */
 @media (min-width: 800px) {
     /* ""Undo"" all the mobile styling */
