@@ -18,10 +18,10 @@ nav {
     /* This positioning will only be active on mobile */
     position: absolute;
     width: 100vw;
-    height: calc(30px + 48px); /* Set the height relative to the padding to only show the menu icon */
+    height: calc(15px + 48px); /* Set the height relative to the padding to only show the menu icon */
     box-sizing: border-box;
 
-    padding: 30px;
+    padding: 15px 30px;
     background: #212121;
 
     /* Don't let the user scroll when only the menu icon is shown */
@@ -89,7 +89,7 @@ tr:nth-child(even) {
 
 h1 {
     font-size: 2.7em;
-    margin: 1.5rem 0 1.5rem 0;
+    margin: 0rem 0 1.5rem 0;
 }
 h2 {
     font-size: 2.1em;
