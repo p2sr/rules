@@ -35,6 +35,17 @@ nav {
     transition: .3s ease;
 }
 
+nav img {
+    float: left;
+    padding-right: 1em;
+}
+
+nav h2 {
+    margin: 0px;
+    height: 48px;
+    line-height: 48px;
+}
+
 /* This class gets applied when the menu is opened on mobile */
 nav.visible {
     height: 100vh;
@@ -90,6 +101,7 @@ tr:nth-child(even) {
 h1 {
     font-size: 2.7em;
     margin: 0rem 0 1.5rem 0;
+    display: none;
 }
 h2 {
     font-size: 2.1em;
@@ -179,12 +191,16 @@ table.commands tr:nth-child(1) {
     }
 
     /* Hide the menu icon */
-    nav img {
+    nav img, nav h2 {
         display: none;
     }
 
     /* Remove the top offset */
     main {
         margin: 0;
+    }
+
+    h1 {
+        display: initial;
     }
 }
