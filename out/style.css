@@ -33,6 +33,8 @@ nav {
     /* Animate menu opening and closing on mobile */
     z-index: 1;
     transition: .3s ease;
+
+    overscroll-behavior: none;
 }
 
 nav img {
