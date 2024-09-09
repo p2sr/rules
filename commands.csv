@@ -131,7 +131,7 @@ sar_find_ent,Banned,-
 sar_find_ents,Banned,-
 sar_fix_reloaded_cheats,Non-functional,-
 sar_font_*,Non-functional,-
-sar_force_fov,Functional,-
+sar_force_viewmodel_fov,Functional,-
 sar_force_qc,Banned,-
 sar_getpos,Banned,-
 sar_geteyepos,Banned,-
@@ -182,7 +182,6 @@ sar_seamshot_finder,Banned,-
 sar_session,Non-functional,-
 sar_show_entinp,Banned,-
 sar_skiptodemo,Banned,-
-sar_speedrun_*,Non-functional,-
 sar_sr_hud_*,Non-functional,-
 sar_startdemos,Banned,-
 sar_startdemosfolder,Banned,-
