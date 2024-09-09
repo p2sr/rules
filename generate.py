@@ -107,7 +107,12 @@ with open("template.html", "r") as f:
 
 out = (template
     .replace("{{CONTENT}}", content)
-    .replace("{{NAV_MENU}}", generate_nav(md.toc_tokens))
+    .replace("{{NAV_MENU}}", generate_nav(md.toc_tokens) + """
+        <div id='nav-links'>
+            <a href="https://github.com/p2sr/rules" target="_blank" class="fa-brands fa-github"></a>
+            <a href="https://discord.com/invite/hRwE4Zr" target="_blank" class="fa-brands fa-discord"></a>
+        </div>
+        """)
     .replace("{{COMMAND_LIST}}", generate_command_table())
 )
 
