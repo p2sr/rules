@@ -1,7 +1,10 @@
 document.querySelectorAll("nav img, nav a").forEach(e => {
     e.addEventListener("click", () => {
-        document.querySelector("nav").classList.toggle("visible");
-        document.querySelector("nav").scrollTo({ top: 0, behavior: "smooth" }); // Reset scroll position
+        const navElement = document.querySelector("nav");
+        navElement.classList.toggle("visible");
+        setTimeout(() => {
+            navElement.scrollTo({ top: 0, behavior: "smooth" }); // Reset scroll position 
+        }, 0);
     })
 });
 
