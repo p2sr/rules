@@ -66,6 +66,14 @@ def generate_nav(sections):
 
     return out
 
+def sort_command_func(cmd):
+    command = cmd["Command"]
+    if command.startswith('-'):
+        return '0' + command[1:] + '1'
+    elif command.startswith('+'):
+        return '0' + command[1:] + '0'
+    return '1' + command + '2'
+
 def generate_command_table():
     out = """
     <input type="text" id="command-search" onkeyup="searchCommands()" placeholder="Search commands...">
@@ -77,16 +85,22 @@ def generate_command_table():
         </tr>
     """
 
+    commands = []
     with open("commands.csv", newline="") as f:
         reader = csv.DictReader(f)
         for row in reader:
-            out += f"""
-            <tr>
-                <td><code>{row["Command"]}</code></td>
-                <td>{row["Type"]}</td>
-                <td>{row["Allowed Values"]}</td>
-            </tr>
-            """
+            commands.append(row)
+
+    last = ''
+    for cmd in sorted(commands, key=sort_command_func):
+        if cmd['Command'] == last:
+            print(f"Duplicate command: {cmd['Command']}")
+        out += "<tr>"
+        out += f"<td>{cmd['Command']}</td>"
+        out += f"<td>{cmd['Type']}</td>"
+        out += f"<td>{cmd['Allowed Values']}</td>"
+        out += "</tr>"
+        last = cmd['Command']
 
     out += "</table>"
     return out
