@@ -73,7 +73,6 @@ sar_stop,Functional,-
 sar_toast_create,Non-functional,-
 sar_check_update,Non-functional,-
 sar_update,Non-functional,-
-svar_*,Non-functional,-
 sar_aim_point_*,Banned,-
 sar_aircontrol,Banned,-
 sar_autojump,Banned,-
@@ -188,7 +187,6 @@ sar_startdemosfolder,Banned,-
 sar_statcounter_filepath,Non-functional,-
 sar_stats_*,Non-functional,-
 sar_stitcher_*,Banned,-
-sar_stop,Non-functional,-
 sar_strafe_quality_*,Non-functional,-
 sar_strafesync_*,Non-functional,-
 sar_sum_*,Non-functional,-
