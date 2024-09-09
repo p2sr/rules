@@ -68,6 +68,7 @@ def generate_nav(sections):
 
 def generate_command_table():
     out = """
+    <input type="text" id="command-search" onkeyup="searchCommands()" placeholder="Search commands...">
     <table class="commands">
         <tr>
             <th>Command</th>

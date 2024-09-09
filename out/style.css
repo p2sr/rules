@@ -98,10 +98,14 @@ td, th {
     text-align: left;
 }
 
-tr:nth-child(odd) {
+tr.hidden {
+    display: none;
+}
+
+:nth-child(odd of tr:not(.hidden)) {
     background: #383838;
 }
-tr:nth-child(even) {
+:nth-child(even of tr:not(.hidden)) {
     background: #2a2a2a;
 }
 
