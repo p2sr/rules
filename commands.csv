@@ -208,6 +208,7 @@ sar_vphys_setasleep,Banned,-
 sar_vphys_setgravity,Banned,-
 sar_vphys_setspin,Banned,-
 sar_workshop_*,Banned,-
+sar_workshop,Banned,-
 sar_pause_at,Banned,-
 sar_pause_for,Banned,-
 sar_alias,Non-functional,-
