@@ -2,6 +2,7 @@
 
 Currently, the only permitted external modification for use in runs is
 SourceAutoRecord (SAR) on the latest full release or a later pre-release.
+If SAR is used in a run then demos are required for the run.
 
 Custom builds of SAR are *not* allowed - only the releases from the official GitHub
 repository may be used. Other external modifications, such as game plugins or code
