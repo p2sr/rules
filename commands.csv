@@ -28,7 +28,7 @@ m_rawinput,Functional,-
 save,Functional,-
 autosave,Functional,-
 con_drawnotify,Functional,-
-vm_debug,Functional,-
+vm_debug,Banned,-
 cl_showpos,Functional,"0, 1"
 cl_forwardspeed,Functional,"0 .. 175"
 cl_backspeed,Functional,"0 .. 175"
@@ -138,7 +138,7 @@ sar_give_betsrighter,Banned,-
 sar_give_fly,Banned,-
 sar_groundframes_*,Non-functional,-
 sar_hud_velocity_precision,Functional,"0 .. 2"
-sar_hud_precision,Functional,"0 .. 6"
+sar_hud_precision,Functional,"0 .. 2"
 sar_hud_ent_slot_serial,Banned,-
 sar_hud_eyeoffset,Banned,-
 sar_hud_inspection,Banned,-
