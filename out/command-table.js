@@ -6,7 +6,14 @@ function searchCommands() {
         let commandName = command.children[0].textContent.toLowerCase();
         let commandType = command.children[1].textContent.toLowerCase();
         let commandDescription = command.children[2].textContent.toLowerCase();
+        let match = false;
         if (commandName.includes(query) || commandType.includes(query) || commandDescription.includes(query)) {
+            match = true;
+        }
+        if (commandName.endsWith('*') && query.startsWith(commandName.slice(0, -1))) {
+            match = true;
+        }
+        if (match) {
             anyMatch = true;
             command.classList.remove('hidden');
         } else {
