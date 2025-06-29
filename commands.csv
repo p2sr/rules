@@ -229,3 +229,4 @@ wait_mode,Non-functional,-
 wait_persist_across_loads,Non-functional,-
 sar_quickhud_*,Non-functional,"Pre-defined allowed values, see above"
 sar_crosshair_*,Non-functional,"Pre-defined allowed values, see above"
+hidehud,Non-functional,-
