@@ -11,7 +11,7 @@ load,Action,-
 "+use / -use",Action,-
 "+attack / -attack",Action,-
 "+attack2 / -attack2",Action,-
-"+remote_view / -remote_view",Functional,-
+"+remote_view / -remote_view",Non-functional,-
 "+zoom / -zoom",Functional,-
 +quick_ping,Action,-
 -quick_ping,Functional,-
