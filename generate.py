@@ -41,6 +41,7 @@ def read_section(path):
                 out += mdspan(f"**SLA:** {row['SLA']}")
                 out += mdspan(f"**Pause Abuse:** {row['Pause Abuse']}")
                 out += mdspan(f"**Demo Requirement:** {row['Demo Requirement']}")
+                out += mdspan(f"**Video Requirement:** {row['Video Requirement']}")
                 out += mdspan(f"[Leaderboard]({row['Leaderboard']})")
                 out += mdspan(f"**Moderators:** {row['Moderators']}")
                 if row["Notes"] != "":
