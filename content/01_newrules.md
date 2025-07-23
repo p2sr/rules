@@ -1,9 +1,9 @@
 ## Newest Rule Changes
 
-### [<u>SAR 1.14.2 released</u>](https://discord.com/channels/146404426746167296/636786123091345438/1386304174844547124)
+### [<u>SAR 1.14.3 released</u>](https://discord.com/channels/146404426746167296/636786123091345438/1393447185248682004)
 
-> SAR version 1.14.2 just dropped, which improves the speedrun timer HUD (`sar_sr_hud`),
-> ghost sync countdowns, and more. You can find the full release notes [here](https://github.com/p2sr/SourceAutoRecord/releases/tag/1.14.2).
+> SAR version 1.14.3 just dropped, adding and improving various features.
+> You can find the full release notes [here](https://github.com/p2sr/SourceAutoRecord/releases/tag/1.14.3).
 >
 > This version of SAR has been released for a week, so any runs using older versions of
 > SAR will be rejected.
