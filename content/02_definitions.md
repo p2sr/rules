@@ -31,8 +31,10 @@ Save/Load Abuse (SLA) is defined as using any unnatural load or level transition
 anything other than touching a changelevel trigger in the map) in order to affect the
 chance of some event occurring or make an event possible. For instance, saveload
 clipping is considered SLA, since it achieves an effect which would otherwise be
-impossible. However reloading to retry RNG would not be considered SLA, as long as 
-everything is possible without any save loads.
+impossible. However, reloading to retry RNG would not be considered SLA, as long as
+everything is possible without any save loads. For example, you can reload to retry
+lucky door skip in `sp_a2_bridge_the_gap`, or for the ball hitting the button in
+`sp_a2_trust_fling`.
 
 ### Out of Bounds (OOB)
 
