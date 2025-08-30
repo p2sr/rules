@@ -19,9 +19,14 @@ load,Action,-
 -coop_ping,Functional,-
 +mouse_menu,Functional,-
 -mouse_menu,Action,-
+"+lookup / -lookup",Action,-
+"+lookdown / -lookdown",Action,-
+cl_yawspeed,Functional,"Non-Naan related values"
+cl_pitchspeed,Functional,"Non-Naan related values"
+cl_mouselook,Functional,"0, 1"
 sv_zoom_stop_movement_threashold,Functional,-
 sv_zoom_stop_time_threashold,Functional,-
-sensitivity,Functional,-
+sensitivity,Functional,"Non-Naan related values"
 zoom_sensitivity_ratio,Functional,-
 m_yaw,Functional,-
 m_rawinput,Functional,-
