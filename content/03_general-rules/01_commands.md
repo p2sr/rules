@@ -1,10 +1,5 @@
 ### Commands
 
-<span style="color:#ff8888;font-weight:bold;">
-IF YOU ARE UNSURE WHETHER A COMMAND IS ALLOWED, CHECK WITH A MODERATOR FOR YOUR
-CATEGORY BEFORE USING IT.
-</span>
-
 The game contains a wide array of commands and variables (cvars) which can be used to
 achieve various effects. Commands are banned or allowed considering several criteria.
 All commands accessible in normal gameplay (e.g. common movement commands, save/load)
