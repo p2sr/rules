@@ -39,6 +39,9 @@ cl_forwardspeed,Functional,"0 .. 175"
 cl_backspeed,Functional,"0 .. 175"
 cl_sidespeed,Functional,"0 .. 175"
 cl_fov,Functional,"45 .. 140"
+cl_interp_ratio,Banned,2.0
+cl_interp,Banned,0.1
+rate,Banned,10000
 contimes,Functional,-
 developer,Functional,"0, 1"
 con_filter_enable,Functional,-
