@@ -1,10 +1,11 @@
 ## Newest Rule Changes
 
-### [<u>SAR 1.14.4 released</u>](https://discord.com/channels/146404426746167296/636786123091345438/1414799431877918800)
+### [<u>SAR 1.14.6 released</u>](https://discord.com/channels/146404426746167296/636786123091345438/1431846219961077882)
 
-> SAR version 1.14.4 is the latest version, adding and improving various features,
-> including support for The Cleaning Game and Divinity Chapter 2.
-> You can find the full release notes [here](https://github.com/p2sr/SourceAutoRecord/releases/tag/1.14.4).
+> SAR version 1.14.6 is the latest version, adding and improving various features,
+> including Wakeup CM pause abuse detection and improved support for Orange
+> cheat HUDs, as well as various bugfixes.
+> You can find the full release notes [here](https://github.com/p2sr/SourceAutoRecord/releases/tag/1.14.6).
 >
 > This version of SAR has been released for a week, so any runs using older versions of
 > SAR will be rejected.
