@@ -47,8 +47,10 @@ def read_section(path):
                 if row["Notes"] != "":
                     out += "<hr />"
                     out += mdspan(row["Notes"], "notes")
-                out += '</div>'
+                out += '</div>\n'
         out += '</div>'
+    else:
+        out = f"""<div class="content" markdown="block">{out}</div>"""
 
     return out
 
@@ -114,7 +116,7 @@ for ent in sorted(os.listdir("content")):
     if not ent_path.endswith(".md"): continue
     md_str += read_section(ent_path[:-3])
 
-md = markdown.Markdown(extensions=['toc'])
+md = markdown.Markdown(extensions=['toc', 'md_in_html'])
 content = md.convert(md_str)
 
 with open("template.html", "r") as f:
