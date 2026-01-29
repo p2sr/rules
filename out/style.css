@@ -98,7 +98,7 @@ nav .navindent {
     font-size: 0.9em;
 }
 
-:not(td) > code {
+:not(td) > code, time {
     padding: 1px 2px;
 
     background: #3a3a3a;
@@ -197,6 +197,7 @@ table.commands tbody {
     display: block;
 
     max-width: calc(100vw - 2 * 20px); /* 20px is the horizontal padding on "main" */
+    min-height: 30em;
     max-height: 30em;
     overflow: auto;
 }

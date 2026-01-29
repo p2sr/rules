@@ -2,6 +2,7 @@
 
 import os
 import csv
+import re
 import markdown
 
 def mdspan(md, classname=None):
@@ -113,6 +114,17 @@ for ent in sorted(os.listdir("content")):
     if not os.path.isfile(ent_path): continue
     if not ent_path.endswith(".md"): continue
     md_str += read_section(ent_path[:-3])
+
+# Replace Discord-style UNIX epoch markdown like <t:1609459200:R>
+# with HTML <time> elements that client-side JS will render.
+def _replace_timestamp_tokens(s):
+    def _repl(m):
+        epoch = m.group(1)
+        fmt = m.group(2)
+        return f'<time class="discord-timestamp" data-epoch="{epoch}" data-format="{fmt}">{epoch}</time>'
+    return re.sub(r'<t:(\d+):([tTdDfFR])>', _repl, s)
+
+md_str = _replace_timestamp_tokens(md_str)
 
 md = markdown.Markdown(extensions=['toc'])
 content = md.convert(md_str)

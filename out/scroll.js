@@ -10,7 +10,8 @@ const calcNavAmounts = (root, root_top, root_bottom, root_min, root_max) => {
         const min = root_min + (root_max - root_min) * nest_min;
         const max = root_min + (root_max - root_min) * nest_max;
         if (child.tagName === "A") {
-            id = child.href.substring(child.href.lastIndexOf("#") + 1)
+            if (!child.href.includes("#")) continue;
+            const id = child.href.substring(child.href.lastIndexOf("#") + 1)
             nav_amounts.push({ id: id, min: min, max: max });
         } else {
             nav_amounts = nav_amounts.concat(calcNavAmounts(child, rect.top, rect.bottom, min, max));
