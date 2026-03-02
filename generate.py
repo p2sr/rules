@@ -60,7 +60,7 @@ def read_section(path):
     return out
 
 # Nav section generation
-def generate_nav(sections):
+def generate_nav(page, sections):
     out = ""
     for sect in sections:
         sect_id = sect["id"]
@@ -70,8 +70,18 @@ def generate_nav(sections):
         out += f"<a href='#{sect_id}'>{name}</a>"
         if len(children) > 0:
             out += "<div class='navindent'>"
-            out += generate_nav(children)
+            out += generate_nav("__INDENT__" + page, children)
             out += "</div>"
+    
+    if (not page.startswith("__INDENT__")):
+        out += "<div id='nav-links'>\n"
+        if (page != "index"):
+            out += '<a href="/" class="fa-solid fa-house"></a>\n'
+        out += """
+                <a href="https://github.com/p2sr/rules" target="_blank" class="fa-brands fa-github"></a>
+                <a href="https://discord.com/invite/hRwE4Zr" target="_blank" class="fa-brands fa-discord"></a>
+            </div>
+            """
 
     return out
 
@@ -145,12 +155,7 @@ for page in os.listdir("content"):
 
     out = (template
         .replace("{{CONTENT}}", content)
-        .replace("{{NAV_MENU}}", generate_nav(md.toc_tokens) + """
-        <div id='nav-links'>
-            <a href="https://github.com/p2sr/rules" target="_blank" class="fa-brands fa-github"></a>
-            <a href="https://discord.com/invite/hRwE4Zr" target="_blank" class="fa-brands fa-discord"></a>
-        </div>
-        """)
+        .replace("{{NAV_MENU}}", generate_nav(page, md.toc_tokens))
         .replace("{{COMMAND_LIST}}", commands)
     )
 
