@@ -125,32 +125,38 @@ def _replace_timestamp_tokens(s):
         return f'<time class="discord-timestamp" data-epoch="{epoch}" data-format="{fmt}">{epoch}</time>'
     return re.sub(r'<t:(\d+):([tTdDfFR])>', _repl, s)
 
-md_str = ""
-md = markdown.Markdown(extensions=['toc'])
-for ent in sorted(os.listdir("content")):
-    ent_path = os.path.join("content", ent)
-    if not os.path.isfile(ent_path): continue
-    if not ent_path.endswith(".md") and not ent_path.endswith(".html"): continue
-    basename = os.path.splitext(ent_path)[0]
-    md_str += read_section(basename)
-
-md_str = _replace_timestamp_tokens(md_str)
-
-content = md.convert(md_str)
-
 with open("template.html", "r") as f:
     template = f.read()
 
-out = (template
-    .replace("{{CONTENT}}", content)
-    .replace("{{NAV_MENU}}", generate_nav(md.toc_tokens) + """
+for page in os.listdir("content"):
+    md_str = ""
+    md = markdown.Markdown(extensions=['toc'])
+    # Combine sections of the page into one markdown string
+    for ent in sorted(os.listdir(os.path.join("content", page))):
+        ent_path = os.path.join("content", page, ent)
+        if not os.path.isfile(ent_path): continue
+        if not ent_path.endswith(".md") and not ent_path.endswith(".html"): continue
+        basename = os.path.splitext(ent_path)[0]
+        md_str += read_section(basename)
+
+    md_str = _replace_timestamp_tokens(md_str)
+
+    content = md.convert(md_str)
+
+    out = (template
+        .replace("{{CONTENT}}", content)
+        .replace("{{NAV_MENU}}", generate_nav(md.toc_tokens) + """
         <div id='nav-links'>
             <a href="https://github.com/p2sr/rules" target="_blank" class="fa-brands fa-github"></a>
             <a href="https://discord.com/invite/hRwE4Zr" target="_blank" class="fa-brands fa-discord"></a>
         </div>
         """)
-    .replace("{{COMMAND_LIST}}", commands)
-)
+        .replace("{{COMMAND_LIST}}", commands)
+    )
 
-with open("out/index.html", "w") as f:
-    f.write(out)
+    page_path = os.path.join("out", page, "index.html")
+    if page == "index":
+        page_path = os.path.join("out", "index.html")
+    os.makedirs(os.path.dirname(page_path), exist_ok=True)
+    with open(page_path, "w") as f:
+        f.write(out)

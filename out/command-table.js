@@ -1,4 +1,5 @@
 function searchCommands() {
+    if (!document.getElementById("command-search")) return;
     let query = document.getElementById("command-search").value.toLowerCase();
     let commands = document.querySelectorAll(".commands tr:not(:first-child)");
     let anyMatch = false;
