@@ -5,6 +5,7 @@ import csv
 import re
 import markdown
 
+# Markdown to HTML conversion functions
 def mdspan(md, classname=None):
     html = markdown.markdown(md)
     if not html.startswith("<p>") and not html.endswith("</p>"):
@@ -18,16 +19,21 @@ def mdspan(md, classname=None):
 
 def read_section(path):
     out = ""
-    with open(f"{path}.md", "r") as f:
-        out += f.read()
+    if os.path.isfile(f"{path}.html"):
+        with open(f"{path}.html", "r") as f:
+            out += f.read()
+    if os.path.isfile(f"{path}.md"):
+        with open(f"{path}.md", "r") as f:
+            out += f.read()
 
     if os.path.isdir(path):
         for ent in sorted(os.listdir(path)):
             ent_path = os.path.join(path, ent)
             if not os.path.isfile(ent_path): continue
-            if not ent_path.endswith(".md"): continue
+            if not ent_path.endswith(".md") and not ent_path.endswith(".html"): continue
             out += "\n"
-            out += read_section(ent_path[:-3])
+            basename = os.path.splitext(ent_path)[0]
+            out += read_section(basename)
 
     if os.path.isfile(f"{path}.cats"):
         out += '<div class="categories">'
@@ -53,6 +59,7 @@ def read_section(path):
 
     return out
 
+# Nav section generation
 def generate_nav(sections):
     out = ""
     for sect in sections:
@@ -68,6 +75,7 @@ def generate_nav(sections):
 
     return out
 
+# Console commands
 def sort_command_func(cmd):
     command = cmd["Command"]
     if command.startswith('-'):
@@ -106,14 +114,7 @@ def generate_command_table():
 
     out += "</table>"
     return out
-
-
-md_str = ""
-for ent in sorted(os.listdir("content")):
-    ent_path = os.path.join("content", ent)
-    if not os.path.isfile(ent_path): continue
-    if not ent_path.endswith(".md"): continue
-    md_str += read_section(ent_path[:-3])
+commands = generate_command_table()
 
 # Replace Discord-style UNIX epoch markdown like <t:1609459200:R>
 # with HTML <time> elements that client-side JS will render.
@@ -124,9 +125,17 @@ def _replace_timestamp_tokens(s):
         return f'<time class="discord-timestamp" data-epoch="{epoch}" data-format="{fmt}">{epoch}</time>'
     return re.sub(r'<t:(\d+):([tTdDfFR])>', _repl, s)
 
+md_str = ""
+md = markdown.Markdown(extensions=['toc'])
+for ent in sorted(os.listdir("content")):
+    ent_path = os.path.join("content", ent)
+    if not os.path.isfile(ent_path): continue
+    if not ent_path.endswith(".md") and not ent_path.endswith(".html"): continue
+    basename = os.path.splitext(ent_path)[0]
+    md_str += read_section(basename)
+
 md_str = _replace_timestamp_tokens(md_str)
 
-md = markdown.Markdown(extensions=['toc'])
 content = md.convert(md_str)
 
 with open("template.html", "r") as f:
@@ -140,7 +149,7 @@ out = (template
             <a href="https://discord.com/invite/hRwE4Zr" target="_blank" class="fa-brands fa-discord"></a>
         </div>
         """)
-    .replace("{{COMMAND_LIST}}", generate_command_table())
+    .replace("{{COMMAND_LIST}}", commands)
 )
 
 with open("out/index.html", "w") as f:
