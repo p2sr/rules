@@ -12,13 +12,13 @@ suspicious websites.
 
 Demos must be submitted for every segment of the run, in the correct order, with none
 missing. You must only submit the demos that are relevant to your run. You must start
-recording demos before the run begins where possible, or otherwise as soon as you 
+recording demos before the run begins where possible, or otherwise as soon as you
 can - it is recommended to use `sar_record_at` to achieve this. On runs with multiple
-segments, demos must be recorded across loads - this is normally expected to be 
+segments, demos must be recorded across loads - this is normally expected to be
 achieved via the `sar_autorecord` command, but categories may define different methods.
 
-The only websites allowed for uploading demos are Google Drive, and Mediafire. If 
-you are uploading to Mediafire it is a requirement to zip the demos for your run.
+The only websites allowed for uploading demos are Google Drive, and MediaFire. If
+you are uploading to MediaFire it is a requirement to zip the demos for your run.
 If you can't upload to either of these sites due to restrictions in your country then
 please request a waiver from a Moderator. We do not want anyone to have to make a purchase
 in order to submit their speedrun. Waivers will only be given out to those who cannot

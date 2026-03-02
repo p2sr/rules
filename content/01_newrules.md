@@ -18,5 +18,3 @@
 >
 > Note that this does not apply to the [Least Portals category](https://lp.portal2.sr),
 > where precision is still allowed to be 3-6 decimals.
-
- 

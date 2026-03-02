@@ -13,9 +13,9 @@ timed. This can be done using `sar_speedrun_time_pauses 1`, or manually with vid
 evidence.
 
 In Challenge Mode due to spawn timings for orange being semi-random we've set the fastest legal
-time orange can hit the ground to be 2.46s for the following maps: Doors, Laser Crusher, 
-Infinifling, Team Retrieval, Fling Crushers, Catapults, Bridge Swap, Cooperative Funnels, 
-Funnel Laser, Funnel Catch, and Catapult Catch. These are currently the only maps being 
+time orange can hit the ground to be 2.46s for the following maps: Doors, Laser Crusher,
+Infinifling, Team Retrieval, Fling Crushers, Catapults, Bridge Swap, Cooperative Funnels,
+Funnel Laser, Funnel Catch, and Catapult Catch. These are currently the only maps being
 majorly impacted by having faster than normal spawns. More may be added to the list later
 as maps become more optimized.
 
