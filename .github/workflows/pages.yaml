@@ -2,7 +2,6 @@ name: Pages
 
 on:
     push:
-        branches: [ "main" ]
     workflow_dispatch:
 
 jobs:
@@ -30,6 +29,7 @@ jobs:
                 pip install -r requirements.txt
 
             - name: Setup Pages
+              if: "github.repository_owner == 'p2sr' && github.ref == 'refs/heads/main'"
               uses: actions/configure-pages@v5
 
             - name: Build the site
@@ -41,5 +41,6 @@ jobs:
                 path: ./out
 
             - name: Deploy to GitHub Pages
+              if: "github.repository_owner == 'p2sr' && github.ref == 'refs/heads/main'"
               id: deployment
               uses: actions/deploy-pages@v4
