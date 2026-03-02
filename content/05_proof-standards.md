@@ -8,7 +8,9 @@ encouraged over videos as they have several tangible advantages.
 Videos submitted as proof must have an accepted timer visible on the screen. They must
 always be submitted as a single continuous video, they must not have any severe quality
 or framerate issues which impact viewability, and they must not be uploaded to any
-suspicious websites.
+suspicious websites. Twitch VODs/highlights are not accepted by themselves, since they
+are prone to deletion. You can export Twitch highlights to YouTube. If your video proof
+is inaccessible for any reason, and demo proof is not available, your run will be removed.
 
 Demos must be submitted for every segment of the run, in the correct order, with none
 missing. You must only submit the demos that are relevant to your run. You must start
