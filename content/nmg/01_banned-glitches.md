@@ -1,0 +1,45 @@
+### Banned Glitches
+
+The following are considered major glitches and are prohibited in NMG runs:
+
+- [Funnel Fly](https://wiki.portal2.sr/Crouch_Flying_Glitch)
+- [Button Glitch](https://wiki.portal2.sr/Button_Glitch)
+    - Such as in Future Starter and Repulsion Intro
+- [Reportals](https://wiki.portal2.sr/Reportal)
+- Turret Fly
+- [Portal Cuts](https://wiki.portal2.sr/Portal_Placement_Tech#Grate_Shot)
+    - Such as in Funnel Catch
+- Scripted Momentum Abuse
+    - Such as in Cave Johnson
+- Laser Switch Glitch
+- Crouch Toggling Abuse
+    - Referring to double dialogue skip in Ceiling Catapult, **NOT** CTG
+- Multiple Gel Bounces in a Short Time
+    - Such as in Prop Flings, otherwise known as Gel Scroll
+- Prop/Object Hopping
+    - Cubes and Non-cubes
+- Placement Helper Abuse
+    - Such as in PotatOS
+- Portal Placements on Disappearing Gel
+    - Such as in Finale 4
+- Super Physics Deformation (SPD)
+- Stucklaunches
+- Portal Bump Abuse
+    - Portal Bumping is allowed so long as it falls under its intended effects
+- Peek-a-Portals/Flipshots
+    - Such as in Ceiling Catapult
+- Seamshots
+- Pancake Shots
+- Observatory Room Gap Shots
+- Portal Bubble Abuse
+    - Such as in Smooth Jazz
+- FCPS Abuse
+    - Such as during Chorus Skip
+- Dane/Jerry Skip
+    - Including any other way of the player clipping through a model
+- PPD
+- Betsrighter
+- Pause Abusing
+- EHM Abuse
+- Double Trigger_Once Activation
+    - Such as in Laser Relays LP

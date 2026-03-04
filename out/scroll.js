@@ -48,4 +48,5 @@ const updateScroll = () => {
 
 updateScroll();
 main.addEventListener("scroll", updateScroll);
+nav.addEventListener("scroll", updateScroll);
 window.addEventListener("resize", updateScroll);

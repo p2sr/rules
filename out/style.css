@@ -24,6 +24,7 @@ nav {
     position: absolute;
     width: 100vw;
     height: calc(15px + 48px); /* Set the height relative to the padding to only show the menu icon */
+    max-height: max-content;
     box-sizing: border-box;
 
     padding: 15px 30px;
@@ -42,18 +43,20 @@ nav {
     overscroll-behavior: none;
 }
 
-/* FIXME: Maybe push these links to the bottom of the screen if we have space on desktop? */
+/* Push the nav links block to the bottom of the nav when
+    there is extra vertical space. */
 #nav-links {
     position: relative;
     width: 100%;
-    margin-top: 0.3em;
     text-align: center;
     font-size: 2em;
+    margin-top: auto;
+    text-align: center;
 }
 
 #nav-links a {
     color: inherit;
-    padding: 0.2em 0.5em;
+    padding: 0.2em 0.2em;
     margin: auto;
 }
 
@@ -70,7 +73,6 @@ nav h2 {
 
 /* This class gets applied when the menu is opened on mobile */
 nav.visible {
-    height: 100vh;
     overflow: scroll;
 }
 
@@ -209,11 +211,17 @@ table.commands tr:nth-child(1) {
 
 /* Large screens only */
 @media (min-width: 800px) {
-    /* ""Undo"" all the mobile styling */
+    body {
+        grid-template-columns: max-content 1fr;
+    }
+
     nav {
+        display: flex;
+        flex-direction: column;
         position: unset;
-        width: unset;
-        height: unset;
+        width: auto;
+        height: 100vh;
+        max-height: unset;
         overflow: auto;
     }
 

@@ -8,17 +8,19 @@ encouraged over videos as they have several tangible advantages.
 Videos submitted as proof must have an accepted timer visible on the screen. They must
 always be submitted as a single continuous video, they must not have any severe quality
 or framerate issues which impact viewability, and they must not be uploaded to any
-suspicious websites.
+suspicious websites. Twitch VODs/highlights are not accepted by themselves, since they
+are prone to deletion. You can export Twitch highlights to YouTube. If your video proof
+is inaccessible for any reason, and demo proof is not available, your run will be removed.
 
 Demos must be submitted for every segment of the run, in the correct order, with none
 missing. You must only submit the demos that are relevant to your run. You must start
-recording demos before the run begins where possible, or otherwise as soon as you 
+recording demos before the run begins where possible, or otherwise as soon as you
 can - it is recommended to use `sar_record_at` to achieve this. On runs with multiple
-segments, demos must be recorded across loads - this is normally expected to be 
+segments, demos must be recorded across loads - this is normally expected to be
 achieved via the `sar_autorecord` command, but categories may define different methods.
 
-The only websites allowed for uploading demos are Google Drive, and Mediafire. If 
-you are uploading to Mediafire it is a requirement to zip the demos for your run.
+The only websites allowed for uploading demos are Google Drive, and MediaFire. If
+you are uploading to MediaFire it is a requirement to zip the demos for your run.
 If you can't upload to either of these sites due to restrictions in your country then
 please request a waiver from a Moderator. We do not want anyone to have to make a purchase
 in order to submit their speedrun. Waivers will only be given out to those who cannot

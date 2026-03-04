@@ -1,4 +1,4 @@
-out/index.html
+out/**/index.html
 
 # JetBrains IDE project settings
 .idea/

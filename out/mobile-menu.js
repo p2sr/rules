@@ -1,10 +1,12 @@
 document.querySelectorAll("nav img, nav a").forEach(e => {
     e.addEventListener("click", () => {
-        const navElement = document.querySelector("nav");
-        navElement.classList.toggle("visible");
-        setTimeout(() => {
-            navElement.scrollTo({ top: 0, behavior: "smooth" }); // Reset scroll position 
-        }, 0);
+        if (window.innerWidth < 800) {
+            const navElement = document.querySelector("nav");
+            navElement.classList.toggle("visible");
+            setTimeout(() => {
+                navElement.scrollTo({ top: 0, behavior: "smooth" }); // Reset scroll position 
+            }, 0);
+        }
     })
 });
 
