@@ -10,9 +10,6 @@ thereof. These input devices should only use standard functionality for these de
 inputs for the game. Here are some examples that are on the edge but we've noted as legal:
 
 - Freescroll (as typically seen on Logitech mice)
-
 - Rebinding a joystick on controller to spam jump
-
 - Analogue inputs from analogue keyboards
-
-- Steam input has some functionality which is allowed and some which is not
+- Steam Input has some functionality which is allowed and some which is not
