@@ -1,0 +1,48 @@
+### Banned Glitches
+
+The following are considered major glitches and are prohibited in NMG runs:
+
+- [Funnel Fly](https://wiki.portal2.sr/Crouch_Flying_Glitch)
+- [Button Glitch](https://wiki.portal2.sr/Button_Glitch)
+    - Such as in Future Starter and Repulsion Intro
+- [Reportals](https://wiki.portal2.sr/Reportal)
+- [Turret Fly](https://wiki.portal2.sr/Prop_Fly)
+    - Such as in Turret Sabotage, using two turrets to prop fly
+- [Portal Cuts](https://wiki.portal2.sr/Portal_Placement_Tech#Grate_Shot)
+    - Such as in Funnel Catch
+- [Scripted Momentum Abuse](https://wiki.portal2.sr/Scripted_Momentum_Abuse)
+    - Such as in Cave Johnson
+- [Laser Switch Glitch](https://wiki.portal2.sr/Laser_Switch_Glitch)
+    - Rapidly switching lasers between multiple receivers to activate them at once, such as in Triple Laser
+- [Crouch Toggling Abuse](https://wiki.portal2.sr/Ceiling_Catapult#General_Route)
+    - Referring to double dialogue skip in Ceiling Catapult, **NOT** CTG
+- [Multiple Gel Bounces in a Short Time](https://wiki.portal2.sr/Gel_Scroll)
+    - Such as in Prop Flings, otherwise known as Gel Scroll
+- [Prop/Object Hopping](https://wiki.portal2.sr/Prop_Hop)
+    - Cubes and Non-cubes
+- [Placement Helper Abuse](https://wiki.portal2.sr/Portal_Placement_Tech#Placement_Helper_Abuse)
+    - Such as in PotatOS
+- [Portal Placements on Disappearing Gel](https://wiki.portal2.sr/Finale_4#Early_Moon_Shot)
+    - Such as in Finale 4
+- [Super Physics Deformation (SPD)](https://wiki.portal2.sr/Super_Physics_Deformation)
+- [Stucklaunches](https://wiki.portal2.sr/Stucklaunch)
+    - Such as in Three Gels and Crazy Box
+- [Portal Bump Abuse](https://wiki.portal2.sr/Portal_Placement_Tech#Portal_Bumping)
+    - Portal Bumping is allowed so long as it falls under its intended effects
+- [Peek-a-Portals/Flipshots](https://wiki.portal2.sr/Peek-a-portal)
+    - Such as in Ceiling Catapult
+- [Seamshots](https://wiki.portal2.sr/Portal_Placement_Tech#Seam_Shot)
+- [Pancake Shots](https://wiki.portal2.sr/Portal_Placement_Tech#Pancake_Shot)
+- [Observatory Room Gap Shots](https://wiki.portal2.sr/Column_Blocker#Challenge_Mode_Specific)
+- [Portal Bubble Abuse](https://wiki.portal2.sr/Smooth_Jazz#Pushing_the_Cube_Through_the_Door_.28Item_Edge_Glitch.29)
+    - Such as in Smooth Jazz
+- [FCPS Abuse](https://wiki.portal2.sr/FindClosestPassableSpace)
+    - Such as during Chorus Skip
+- [Dane/Jerry Skip](https://wiki.portal2.sr/Column_Blocker)
+    - Including any other way of the player clipping through a model
+- [PPD](https://wiki.portal2.sr/Player_Physics_Deformation)
+- [Betsrighter](https://wiki.portal2.sr/Wakeup#Wakeup_Skip_.2F_Betsrighter)
+- [Pause Abusing](https://wiki.portal2.sr/Wakeup#Wakeup_Skip_.2F_Betsrighter)
+- [EHM Abuse](https://wiki.portal2.sr/Entity_Handle_Misinterpretation)
+- [Double Trigger_Once Activation](https://wiki.portal2.sr/Double_Trigger_Activation)
+    - Such as in Laser Relays LP

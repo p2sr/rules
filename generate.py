@@ -152,6 +152,9 @@ for page in os.listdir("content"):
     md_str = _replace_timestamp_tokens(md_str)
 
     content = md.convert(md_str)
+    content = re.sub(r'<a href="/', f'<a  href="/', content)
+    content = re.sub(r'<a href="', f'<a target="_blank" href="', content)
+    content = re.sub(r'<a  href="/', f'<a href="/', content)
 
     out = (template
         .replace("{{CONTENT}}", content)
