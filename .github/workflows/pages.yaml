@@ -44,4 +44,3 @@ jobs:
               if: "github.repository_owner == 'p2sr' && github.ref == 'refs/heads/main'"
               id: deployment
               uses: actions/deploy-pages@v4
-              
