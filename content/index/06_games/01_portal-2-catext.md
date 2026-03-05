@@ -1,6 +1,6 @@
 ### Portal 2 Category Extensions
 
-### General
+#### General
 
 The Moderators section for these boards will instead list the verifiers for each section.
 
