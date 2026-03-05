@@ -5,6 +5,8 @@ import csv
 import re
 import markdown
 
+SUMMARY_MAX = 200
+
 # Markdown to HTML conversion functions
 def mdspan(md, classname=None):
     html = markdown.markdown(md)
@@ -31,9 +33,8 @@ def read_section(path):
             ent_path = os.path.join(path, ent)
             if not os.path.isfile(ent_path): continue
             if not ent_path.endswith(".md") and not ent_path.endswith(".html"): continue
-            out += "\n"
             basename = os.path.splitext(ent_path)[0]
-            out += read_section(basename)
+            out += "\n" + read_section(basename)
 
     if os.path.isfile(f"{path}.cats"):
         out += '<div class="categories">'
@@ -151,12 +152,27 @@ for page in os.listdir("content"):
 
     md_str = _replace_timestamp_tokens(md_str)
 
+    title = "Portal 2 Rules"
+    if page != "index":
+        title_match = re.search(r'^#+ (.*)', md_str)
+        if title_match:
+            title = title_match.group(1)
+
+    desc = "This page covers " + title + ". Find more info in the Portal 2 Speedrunning Discord at https://s.portal2.sr/discord"
+    desc_match = re.search(r'(^[^#].*)', re.sub(r'\n+', '\n', re.sub(r'\n([^\n])', r' \1', md_str).strip()), flags=re.MULTILINE)
+    if desc_match:
+        desc = desc_match.group(1).strip()
+        if len(desc) > SUMMARY_MAX:
+            desc = desc[:SUMMARY_MAX - 3] + "..."
+
     content = md.convert(md_str)
     content = re.sub(r'<a href="/', f'<a  href="/', content)
     content = re.sub(r'<a href="', f'<a target="_blank" href="', content)
     content = re.sub(r'<a  href="/', f'<a href="/', content)
 
     out = (template
+        .replace("{{PAGE_TITLE}}", re.sub(r'\"', '&quot;', title))
+        .replace("{{PAGE_DESC}}", re.sub(r'\"', '&quot;', desc))
         .replace("{{CONTENT}}", content)
         .replace("{{NAV_MENU}}", generate_nav(page, md.toc_tokens))
         .replace("{{COMMAND_LIST}}", commands)
