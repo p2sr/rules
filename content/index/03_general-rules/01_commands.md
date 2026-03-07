@@ -13,6 +13,10 @@ Allowed commands can be categorised as "action commands", "functional commands",
 commands). Any allowed command may be manually executed by typing it into the console
 at any point, including executing such commands indirectly through `exec` or aliases.
 
+It is not allowed to set console variables that affect the player's movement to values
+that would cause the engine to produce NaN, infinite, or otherwise undefined values
+for the player's movement.
+
 #### HUDs
 
 SAR and the game itself provide various HUDs to the user, accessible through console

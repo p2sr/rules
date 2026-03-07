@@ -5,14 +5,21 @@
 In the game's console, you can execute commands, as well as bind keys to execute
 commands. We define several classes of command.
 
+"Action Commands" are a subset of functional commands defined as any command which has
+a direct effect on the game world. This includes all player movement commands
+(`+forward`, `-forward`, `+duck`, etc), as well as commands such as `load`.
+
 "Functional Commands" are commands which have some effect on the run or the runner's
 ability to perform it. The vast majority of commands fit into this category -
 effectively the only ones that don't are ones which impact timing, such as
 `sar_speedrun_result`, and purely cosmetic ones, such as `sar_hud_set_text`.
 
-"Action Commands" are a subset of functional commands defined as any command which has
-a direct effect on the game world. This includes all player movement commands
-(`+forward`, `-forward`, `+duck`, etc), as well as commands such as `load`.
+"Non-functional Commands" are neither of the above. These are commands which have no
+effect on the run or the runner's ability to perform it. Examples include `sar_hud_set_text`
+and `sar_toast_create`, which only change the HUD.
+
+There are different rules for each category of command, as detailed in the Commands
+section later on.
 
 ### Pause Abuse
 
