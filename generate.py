@@ -7,6 +7,8 @@ import markdown
 
 SUMMARY_MAX = 200
 
+generated_content = set()
+
 # Markdown to HTML conversion functions
 def mdspan(md, classname=None):
     html = markdown.markdown(md)
@@ -33,6 +35,7 @@ def read_section(path):
             ent_path = os.path.join(path, ent)
             if not os.path.isfile(ent_path): continue
             if not ent_path.endswith(".md") and not ent_path.endswith(".html"): continue
+            generated_content.add(ent_path)
             basename = os.path.splitext(ent_path)[0]
             out += "\n" + read_section(basename)
 
@@ -140,6 +143,7 @@ with open("template.html", "r") as f:
     template = f.read()
 
 for page in os.listdir("content"):
+    if not os.path.isdir(os.path.join("content", page)): continue
     md_str = ""
     md = markdown.Markdown(extensions=['toc'])
     # Combine sections of the page into one markdown string
@@ -147,6 +151,7 @@ for page in os.listdir("content"):
         ent_path = os.path.join("content", page, ent)
         if not os.path.isfile(ent_path): continue
         if not ent_path.endswith(".md") and not ent_path.endswith(".html"): continue
+        generated_content.add(ent_path)
         basename = os.path.splitext(ent_path)[0]
         md_str += read_section(basename)
 
@@ -184,3 +189,17 @@ for page in os.listdir("content"):
     os.makedirs(os.path.dirname(page_path), exist_ok=True)
     with open(page_path, "w") as f:
         f.write(out)
+
+# copy all other types of file across to out
+for root, dirs, files in os.walk("content"):
+    for file in files:
+        if os.path.join(root, file) in generated_content:
+            continue
+        if (file.endswith(".cats")): continue
+        src_path = os.path.join(root, file)
+        rel_path = os.path.relpath(src_path, "content")
+        dst_path = os.path.join("out", rel_path)
+        os.makedirs(os.path.dirname(dst_path), exist_ok=True)
+        with open(src_path, "rb") as src_f:
+            with open(dst_path, "wb") as dst_f:
+                dst_f.write(src_f.read())
