@@ -19,4 +19,4 @@ are present in the game or Steam directory to modify an asset is not allowed.
 Modpacks, which are curated by the moderators, are allowed to be used in runs without
 restrictions. These modpacks can be found in the #resources channel of the [P2SR
 discord](https://discord.com/invite/hRwE4Zr). Other than modpacks, you can only
-modify the assets listed on this [Google Doc](https://docs.google.com/document/d/1C8lGxwyicsJU29Twrr0Xf8TfvjM6YV4qKjgPpxGtu_0/edit).
+modify the assets listed on [this page](/textures/).
