@@ -11,3 +11,5 @@ Whichever categories are present will adopt their respective rulesets from the b
 - Timing begins when you have gained control of the player.
 - The ending timing will be listed with the category.
 - Exceptions will be listed if there are any.
+
+#### Categories

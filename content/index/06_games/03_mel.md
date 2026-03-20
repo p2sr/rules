@@ -11,3 +11,5 @@ SAR or SourceSplit must be used for accurate timing.
   `tramstart_relay.EnableRefire` entity input.
 - Timing ends on the tick the ending cutscene is activated in Finale, on the
   `soundscape.Kill` entity input.
+
+#### Categories

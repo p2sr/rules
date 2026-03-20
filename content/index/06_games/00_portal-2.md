@@ -40,3 +40,5 @@ subset of the relevant campaign, so e.g. Chapter 9 runs begin timing as soon as 
 player loads into Finale 1 and end timing when the player shoots the moon.
 If SAR is not used in a run then the user must submit live video of the run
 as evidence.
+
+#### Categories

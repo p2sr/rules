@@ -8,3 +8,5 @@
   entity input.
 - Alternatively, for the good ending, timing ends on the tick the elevator door
   closes, on the `ele_exit_door.Close` entity input.
+
+#### Categories

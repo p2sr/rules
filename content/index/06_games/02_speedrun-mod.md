@@ -15,3 +15,5 @@ Reverse Mod is timed as follows:
   `ending_vehicle.ExitVehicle` entity input.
 - Timing ends on the tick the player activates the bed in Container Ride, on the
   `rev_sleep_button.Use` entity input.
+
+#### Categories

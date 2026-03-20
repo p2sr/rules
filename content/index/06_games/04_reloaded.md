@@ -15,3 +15,5 @@ advantage it provides on some maps.
   tube, on the `finale-finale_vc.Trigger` entity input.
 - Alternatively, for the escape ending, timing ends on the tick when the
   elevator doors close, on the `finale-escape_ending.EnableRefire` entity input.
+
+#### Categories

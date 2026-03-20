@@ -7,3 +7,5 @@ The Moderators section for these boards will instead list the verifiers for each
 #### Timing
 
 The timing conventions will be the same as regular Portal 2 unless stated otherwise.
+
+#### Categories

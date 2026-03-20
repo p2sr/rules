@@ -10,3 +10,5 @@ for submitting runs. Demos can be recorded with `demo_autorecord 1` and
 
 - Timing begins when the crosshair appears.
 - Timing ends when the screen fades to white.
+
+#### Categories

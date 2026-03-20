@@ -13,8 +13,9 @@ When assets are required to be submitted alongside a run, these assets must adhe
 the TOS of all platforms involved in your submission, including both the site the run
 is submitted to and any sites linked from the submission.
 
-Editing binary files (including .DLL, .EXE, .SO, A.OUT, .DYLIB, or .APP) files which
-are present in the game or Steam directory to modify an asset is not allowed.
+Editing binary files (including but not limited to .DLL, .EXE, .SO, A.OUT, .DYLIB, or
+.APP) files which are present in the game or Steam directory is not allowed under any
+circumstances.
 
 Modpacks, which are curated by the moderators, are allowed to be used in runs without
 restrictions. These modpacks can be found in the #resources channel of the [P2SR

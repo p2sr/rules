@@ -86,6 +86,10 @@ main {
     overflow: auto;
 }
 
+main > div {
+    margin-bottom: 2em;
+}
+
 a {
     color: #4cd;
     text-decoration: none;
@@ -100,7 +104,7 @@ nav .navindent {
     font-size: 0.9em;
 }
 
-:not(td) > code, time {
+code, time {
     padding: 1px 2px;
 
     background: #3a3a3a;
@@ -113,6 +117,13 @@ td, th {
     padding-left: 0.3em;
     padding-right: 0.3em;
     text-align: left;
+}
+
+td img {
+    display: block;
+    margin: auto;
+    max-width: 256px;
+    max-height: 192px;
 }
 
 tr.hidden {
