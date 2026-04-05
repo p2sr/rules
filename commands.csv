@@ -174,6 +174,7 @@ sar_patch_major_angle_decay,Banned,-
 sar_patch_minor_angle_decay,Functional,-
 sar_patch_small_angle_decay,Functional,-
 sar_pip_align,Non-functional,-
+sar_portalcolor_*,Non-functional,-
 sar_portalgun_hud_*,Banned,-
 sar_portals_thru_portals,Banned,-
 sar_pp_hud_*,Banned,-
