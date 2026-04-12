@@ -3,6 +3,7 @@
 import os
 import csv
 import re
+import subprocess
 import markdown
 
 SUMMARY_MAX = 200
@@ -84,6 +85,16 @@ def generate_nav(page, sections):
         out += """
                 <a href="https://github.com/p2sr/rules" target="_blank" class="fa-brands fa-github"></a>
                 <a href="https://discord.com/invite/hRwE4Zr" target="_blank" class="fa-brands fa-discord"></a>
+            </div>
+            """
+        modified = subprocess.run(["git", "log", "-1", "--format=%ct", "--", os.path.join("content", page)], capture_output=True, text=True).stdout.strip()
+        if modified:
+            commit = subprocess.run(["git", "log", "-1", "--format=%H", "--", os.path.join("content", page)], capture_output=True, text=True).stdout.strip()
+            out += f"""
+            <div id='last-modified'>
+                This page was last modified <a href="https://github.com/p2sr/rules/commit/{commit}" target="_blank">
+                    <time data-epoch=\"{modified}\" class=\"discord-timestamp\" data-format=\"R\"></time>
+                </a>
             </div>
             """
 

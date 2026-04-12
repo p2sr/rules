@@ -43,6 +43,14 @@ nav {
     overscroll-behavior: none;
 }
 
+#last-modified {
+    font-size: 0.75em;
+    text-align: center;
+}
+#last-modified a {
+    display: inline;
+}
+
 /* Push the nav links block to the bottom of the nav when
     there is extra vertical space. */
 #nav-links {
