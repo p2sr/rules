@@ -21,6 +21,7 @@ load,Action,-
 -mouse_menu,Action,-
 "+lookup / -lookup",Action,-
 "+lookdown / -lookdown",Action,-
+bind,Non-functional,-
 cl_yawspeed,Functional,"Non-Naan related values"
 cl_pitchspeed,Functional,"Non-Naan related values"
 cl_mouselook,Functional,"0, 1"
