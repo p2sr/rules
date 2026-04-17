@@ -72,7 +72,27 @@ def generate_nav(page, sections):
         name = sect["name"]
         children = sect["children"]
 
-        out += f"<a href='#{sect_id}'>{name}</a>"
+        # Clean up trailing timestamp-like or empty parentheses introduced
+        # by inline HTML/time placeholders so nav entries look nicer.
+        def _clean_nav_name(n):
+            # Remove trailing parenthetical groups if their inner text,
+            # after stripping HTML tags, is empty or purely digits (epoch).
+            import re
+            while True:
+                m = re.search(r"\(([^)]*)\)\s*$", n)
+                if not m:
+                    break
+                inner = m.group(1)
+                inner_stripped = re.sub(r"<[^>]+>", "", inner).strip()
+                if inner_stripped == "" or inner_stripped.isdigit():
+                    n = n[:m.start()].rstrip()
+                    continue
+                break
+            return n
+
+        display_name = _clean_nav_name(name)
+
+        out += f"<a href='#{sect_id}'>{display_name}</a>"
         if len(children) > 0:
             out += "<div class='navindent'>"
             out += generate_nav("__INDENT__" + page, children)
