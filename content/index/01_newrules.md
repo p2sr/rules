@@ -1,16 +1,10 @@
 ## Newest Rule Changes
 
-### [<u>SAR 1.14.6 released</u>](https://discord.com/channels/146404426746167296/636786123091345438/1431846219961077882)
+### [<u>Latest SAR version <span class="sar-version"></span></u>](https://github.com/p2sr/SourceAutoRecord/releases/latest) (<span class="sar-timestamp"></span>)
 
-> SAR version 1.14.6 is the latest version, adding and improving various features,
-> including Wakeup CM pause abuse detection and improved support for Orange
-> cheat HUDs, as well as various bugfixes.
-> You can find the full release notes [here](https://github.com/p2sr/SourceAutoRecord/releases/tag/1.14.6).
->
-> This version of SAR has been released for a week, so any runs using older versions of
-> SAR will be rejected.
+> <span class="sar-rule"></span>
 
-### [<u>`vm_debug` is banned</u>](https://discord.com/channels/146404426746167296/636786123091345438/1352006194910466068)
+### [<u>`vm_debug` is banned</u>](https://discord.com/channels/146404426746167296/636786123091345438/1352006194910466068) (<t:1742413795:R>)
 
 > `vm_debug` is no longer an allowed console command. This was our justification for
 > allowing decimal precision from 3-6 decimals, which are no longer allowed. As such,

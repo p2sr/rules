@@ -91,5 +91,23 @@
         });
     }
 
+    (async function () {
+        if (!document.querySelector(".sar-timestamp")) return;
+        // Fetch release data from the GitHub API
+        const stable = (await (await fetch("https://api.github.com/repos/p2sr/SourceAutoRecord/releases/latest")).json());
+        const releaseTime = new Date(stable.published_at).getTime() / 1000;
+        document.querySelectorAll(".sar-version").forEach(element => element.textContent = stable.tag_name);
+        document.querySelectorAll(".sar-timestamp").forEach(element => {
+            element.innerHTML = `<time data-epoch="${releaseTime}" class="discord-timestamp" data-format="R"></time>`
+            scheduleRelative(element.firstChild);
+        });
+        const now = Math.floor(Date.now() / 1000);
+        if (now - releaseTime < (7 * 24 * 60 * 60)) {
+            document.querySelectorAll(".sar-rule").forEach(element => element.textContent = "This version of SAR has been released for less than a week, so runs using older versions of SAR may still be accepted until the one week mark.");
+        } else {
+            document.querySelectorAll(".sar-rule").forEach(element => element.textContent = "This version of SAR has been released for at least a week, so any runs using older versions of SAR will be rejected.");
+        }
+    })();
+
     document.addEventListener('DOMContentLoaded', init);
 })();

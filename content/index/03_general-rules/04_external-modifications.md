@@ -17,6 +17,10 @@ pre-release you are putting your runs at risk.
 When a new full release of SAR is made available, there is a grace period of 1 week
 in which the previous full release is still allowed.
 
+The <a href="https://github.com/p2sr/SourceAutoRecord/releases/latest">most recent release of SAR</a>
+was <span class="sar-version"></span>, released <span class="sar-timestamp"></span>.
+<span class="sar-rule"></span>
+
 Exceptions may be made on a case-by-case basis: if you think you have a legitimate
 case for using an external modification which isn't listed here, consult a moderator
 for the category you're running.
