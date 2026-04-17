@@ -61,14 +61,12 @@
         if (absDiff < 60) unitSeconds = 1; // seconds
         else if (absDiff < 3600) unitSeconds = 60; // minutes
         else if (absDiff < 86400) unitSeconds = 3600; // hours
-        else if (absDiff < 604800) unitSeconds = 86400; // days
-        else if (absDiff < 2629800) unitSeconds = 604800; // weeks
-        else if (absDiff < 31557600) unitSeconds = 2629800; // months
-        else unitSeconds = 31557600; // years
+        else unitSeconds = 86400; // days
 
         const remainder = absDiff % unitSeconds;
         let nextSeconds = remainder === 0 ? unitSeconds : (unitSeconds - remainder);
         if (nextSeconds < 1) nextSeconds = 1;
+        if (nextSeconds > 3600) nextSeconds = 3600; // sanity cap https://stackoverflow.com/a/77016315
 
         // Clear previous timer if any
         if (el._timeoutId) clearTimeout(el._timeoutId);
