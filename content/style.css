@@ -2,7 +2,31 @@
 
 /* This makes some browser-specific elements look neater, such as dark scrollbars */
 :root {
-    color-scheme: dark;
+    --foreground: black;
+    --background: white;
+    --background-secondary: #c0c0c0;
+    --background-tertiary: #a7a7a7;
+    --border: #aaa;
+    --link: #29f;
+    --red: #f44;
+    --darker: #888;
+    --nav-shadow: #00000010;
+    @media (prefers-color-scheme: dark) {
+        --foreground: white;
+        --background: #0F0F0F;
+        --background-secondary: #151515;
+        --background-tertiary: #212121;
+        --border: #555;
+        --link: #4cd;
+        --red: #f88;
+        --darker: black;
+        --nav-shadow: #ffffff10;
+        color-scheme: dark;
+
+        nav img {
+            filter: none;
+        }
+    }
 }
 
 body {
@@ -12,8 +36,8 @@ body {
 
     margin: 0;
 
-    color: #f8f8f8;
-    background: #212121;
+    color: var(--foreground);
+    background: var(--background);
 
     font-family: 'Barlow Semi Condensed', sans-serif;
     font-size: 1.1em;
@@ -28,7 +52,7 @@ nav {
     box-sizing: border-box;
 
     padding: 15px 30px;
-    background: #212121;
+    background: var(--background);
 
     /* Don't let the user scroll when only the menu icon is shown */
     overflow: hidden;
@@ -38,7 +62,7 @@ nav {
 
     /* Animate menu opening and closing on mobile */
     z-index: 1;
-    transition: .3s ease;
+    transition: height .3s ease;
 
     overscroll-behavior: none;
 }
@@ -71,6 +95,7 @@ nav {
 nav img {
     float: left;
     padding-right: 1em;
+    filter: invert(100%);
 }
 
 nav h2 {
@@ -99,9 +124,12 @@ main > div {
 }
 
 a {
-    color: #4cd;
+    color: var(--link);
     text-decoration: none;
     margin-bottom: 0.15em;
+}
+main a {
+    font-weight: 600;
 }
 
 nav .navindent {
@@ -115,9 +143,9 @@ nav .navindent {
 code, time {
     padding: 1px 2px;
 
-    background: #3a3a3a;
+    background: var(--background-secondary);
 
-    border: 1px solid #555;
+    border: 1px solid var(--border);
     border-radius: 5px;
 }
 
@@ -139,10 +167,13 @@ tr.hidden {
 }
 
 :nth-child(odd of tr:not(.hidden)) {
-    background: #383838;
+    background: var(--background-secondary);
 }
 :nth-child(even of tr:not(.hidden)) {
-    background: #2a2a2a;
+    background: var(--background-tertiary);
+}
+.red {
+    color: var(--red);
 }
 
 h1 {
@@ -206,8 +237,9 @@ p, li {
     width: 25rem;
     padding: 1em;
 
-    background: #141414;
-    border-radius: 3px;
+    background: var(--background-tertiary);
+    border-radius: 1%;
+    filter: drop-shadow(0px 0px 5px var(--darker));
 }
 
 .category h5 {
@@ -221,7 +253,7 @@ p, li {
 }
 
 .category hr {
-    color: white;
+    color: var(--border);
     width: 100%;
     margin: 1em 0 1em 0;
 }
@@ -230,9 +262,9 @@ table.commands tbody {
     display: block;
 
     max-width: calc(100vw - 2 * 20px); /* 20px is the horizontal padding on "main" */
-    min-height: 30em;
     max-height: 30em;
     overflow: auto;
+    border: 2px solid var(--border);
 }
 
 table.commands tr:nth-child(1) {

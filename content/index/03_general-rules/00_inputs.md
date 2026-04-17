@@ -1,6 +1,6 @@
 ### Input Methods
 
-<span style="color:#ff8888;font-weight:bold;">
+<span style="color:var(--red);font-weight:bold;">
 IF YOU ARE UNSURE WHETHER A COMMAND OR INPUT METHOD IS ALLOWED, CHECK WITH A MODERATOR FOR YOUR
 CATEGORY BEFORE USING IT.
 </span>

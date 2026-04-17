@@ -44,7 +44,7 @@
         }
         const start = min * 100;
         const end = max * 100;
-        nav.style.background = `linear-gradient(180deg, #ffffff10 ${start}%, #0000 ${end}%)`;
+        nav.style.background = `linear-gradient(180deg, var(--nav-shadow) ${start}%, #0000 ${end}%)`;
     };
 
     const addAnchors = () => {
