@@ -161,7 +161,7 @@ sar_jumpboost,Banned,-
 sar_list_client_classes,Banned,-
 sar_list_server_classes,Banned,-
 sar_list_ents,Banned,-
-sar_load_delay,Non-functional,-
+sar_load_delay,Functional,-
 sar_loads_norender,Non-functional,-
 sar_loads_uncap,Non-functional,-
 sar_lphud_*,Non-functional,-
