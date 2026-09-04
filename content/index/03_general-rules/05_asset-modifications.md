@@ -19,5 +19,5 @@ circumstances.
 
 Modpacks, which are curated by the moderators, are allowed to be used in runs without
 restrictions. These modpacks can be found in the #resources channel of the [P2SR
-discord](https://discord.com/invite/hRwE4Zr). Other than modpacks, you can only
+discord](https://portal2.sr/discord). Other than modpacks, you can only
 modify the assets listed on [this page](/textures/).

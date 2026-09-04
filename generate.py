@@ -102,9 +102,10 @@ def generate_nav(page, sections):
         out += "<div id='nav-links'>\n"
         if (page != "index"):
             out += '<a href="/" class="fa-solid fa-house"></a>\n'
-        out += """
-                <a href="https://github.com/p2sr/rules" target="_blank" class="fa-brands fa-github"></a>
-                <a href="https://discord.com/invite/hRwE4Zr" target="_blank" class="fa-brands fa-discord"></a>
+        upstream = subprocess.run(["git", "remote", "get-url", "origin"], capture_output=True, text=True).stdout.strip()
+        out += f"""
+                <a href="{upstream}" target="_blank" class="fa-brands fa-github"></a>
+                <a href="https://portal2.sr/discord" target="_blank" class="fa-brands fa-discord"></a>
             </div>
             """
         modified = subprocess.run(["git", "log", "-1", "--format=%ct", "--", os.path.join("content", page)], capture_output=True, text=True).stdout.strip()
@@ -112,7 +113,7 @@ def generate_nav(page, sections):
             commit = subprocess.run(["git", "log", "-1", "--format=%H", "--", os.path.join("content", page)], capture_output=True, text=True).stdout.strip()
             out += f"""
             <div id='last-modified'>
-                This page was last modified <a href="https://github.com/p2sr/rules/commit/{commit}" target="_blank">
+                This page was last modified <a href="{upstream}/commit/{commit}" target="_blank">
                     <time data-epoch=\"{modified}\" class=\"discord-timestamp\" data-format=\"R\"></time>
                 </a>
             </div>
@@ -194,7 +195,7 @@ for page in os.listdir("content"):
         if title_match:
             title = title_match.group(1)
 
-    desc = "This page covers " + title + ". Find more info in the Portal 2 Speedrunning Discord at https://s.portal2.sr/discord"
+    desc = "This page covers " + title + ". Find more info in the Portal 2 Speedrunning Discord at https://portal2.sr/discord"
     desc_match = re.search(r'(^[^#].*)', re.sub(r'\n+', '\n', re.sub(r'\n([^\n])', r' \1', md_str).strip()), flags=re.MULTILINE)
     if desc_match:
         desc = desc_match.group(1).strip()
